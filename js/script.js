@@ -41,27 +41,6 @@ function playRound(playerChoice, compChoice) {
 
 function game(){
     
-    // for (let i = 0; i < 5; i++) {
-    //     userSelection = prompt ('Choose Rock Paper or Scissors: ').toLowerCase();
-    //     console.log(playRound(userSelection, compSelection(randomNum())));
-    //     console.log(`User Score: ${userScore}`);
-    //     console.log(`Computer Score: ${compScore}`);
-        
-    //     if (userScore === 3 || compScore === 3) {
-    //         console.log(`GAME OVER!`)
-    //     } 
-
-    //     }
-    //     if (userScore === compScore) {
-    //         console.log(`GAME OVER!`)
-    //         console.log(`IT'S A TIE!`)
-    //     } else if (userScore < compScore) {
-    //         console.log(`GAME OVER!`)
-    //         console.log(`YOU LOST THE GAME!`)
-    //     } else if (userScore > compScore){
-        //         console.log(`GAME OVER!`)
-        //         console.log(`YOU WON THE GAME!`)
-        //     }
     let i = 0;
         
     while (i === 0) {     
