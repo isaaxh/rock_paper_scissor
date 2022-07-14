@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <div class = 'container'>
         <div class = 'gameContainer'>
             <h1>Rock Paper Scissors</h1>
-            <h2>First to five wins!</h2>
-            <h2>First to five wins!</h2>
+            <h3>First to five wins!</h3>
+            <div id="displayResuts"> </div>
             <div class = 'gameOptions'>
                 <button type="button" id="rockBtn">Rock</button>
                 <button type="button" id="paperBtn">Paper</button>
                 <button type="button" id="scissorsBtn">Scissors</button>
             </div>
-            <button type="button" id="restartBtn">Restart</button>
+            <button type="button" id="startBtn">Start</button>
+            <button id="restartBtn" onClick="window.location.reload();">Restart</button>
+
         </div>
     </div>   
 

@@ -22,13 +22,13 @@ body {
   gap: 15px;
 }
 
-#rockBtn, #paperBtn, #scissorsBtn, #restartBtn {
+#rockBtn, #paperBtn, #scissorsBtn, #startBtn, #restartBtn {
   width: 150px;
   height: 45px;
   font-size: 16px
 
 }
 
-#restartBtn {
+#restartBtn, #startBtn {
   margin-top: 20px;
 }
