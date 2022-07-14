@@ -1,3 +1,15 @@
+const btnRock = document.querySelector('#rockBtn');
+const btnPaper = document.querySelector('#paperBtn');
+const btnScissors = document.querySelector('#scissorsBtn');
+const btnRestart = document.querySelector('#restartBtn');
+
+btnRock.addEventListener('click', playRound(userSelection, compSelection(randomNum())));
+
+
+
+
+
+
 let userSelection;
 const gameOptions = ['rock', 'paper', 'scissors'];
 
