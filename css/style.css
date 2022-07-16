@@ -26,6 +26,7 @@ h1 {
   display: flex;
   justify-content:space-between;
   margin-top: 25px;
+  transition:0.3s;
 }
 
 #startBtn, #restartBtn {
@@ -63,7 +64,7 @@ h1 {
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
-  gap: 25px;
+  gap: 80px;
 }
 
 .gameBtn {
