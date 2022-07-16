@@ -9,19 +9,32 @@
     <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <div class = 'container'>
-        <div class = 'gameContainer'>
-            <h1>Rock Paper Scissors</h1>
-            <h3>First to five wins!</h3>
-            <div id="displayResuts"> </div>
-            <div class = 'gameOptions'>
-                <button type="button" id="rockBtn">Rock</button>
-                <button type="button" id="paperBtn">Paper</button>
-                <button type="button" id="scissorsBtn">Scissors</button>
-            </div>
+    <h1>Rock Paper Scissors</h1>
+    <div class = 'menu-options'>
+        <div>Click the start button to begin...</div>
+        <div class = 'menuBtns'>
             <button type="button" id="startBtn">Start</button>
             <button id="restartBtn" onClick="window.location.reload();">Restart</button>
-
+        </div>
+    </div>
+    <div class = 'container'>
+        <div id = 'message1'>First to five wins</div>
+        <div id = 'scoreTracker'>3 - 4</div>
+        <div id = 'message2'>Player wins this round</div>
+        <div class = 'gameOptions'>
+            <button type="button" class = 'gameBtn' id="rockBtn"><img id = 'img-rock' src="./img/rock (1).png" alt="img of rock icon"/></button>
+            <button type="button" class = 'gameBtn'id="paperBtn"><img id = 'img-paper' src="./img/paper.png" alt="img of paper icon"/></button>
+            <button type="button" class = 'gameBtn'id="scissorsBtn"><img id= 'img-scissors' src="./img/scissors.png" alt="img of scissors icon"/></button>
+        </div>
+        <div class = 'choices-container'>
+            <div class = 'choices-header'>
+                <div>Player</div>
+                <div>Computer</div>
+            </div>
+            <div class = 'choices-body'>
+                <div id = 'player-choices'>rock<br>paper</div>
+                <div id = 'computer-choices'>paper<br>paper</div>
+            </div>
         </div>
     </div>   
 

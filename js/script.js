@@ -12,37 +12,30 @@ let compScore = 0;
 
 // Functions
 
-let randomNum = function generateRandomNum () {
+const randomNum = function generateRandomNum() {
     return Math.floor(Math.random() * 3);
-}
-let compSelection = function pcPlay(randomNum){
-    return gameOptions[randomNum];
+};
+
+function compSelection() {
+    return gameOptions[randomNum()];
 }
 
 function playRound(playerChoice, compChoice) {
-
     if (playerChoice === compChoice) {
-    return `It's a draw, both chose ${playerChoice}`
+        return `It's a draw, both chose ${playerChoice}`;
     }
 
     if (
-        (playerChoice === 'rock' && compChoice === 'paper') || 
+        (playerChoice === 'rock' && compChoice === 'paper') ||
         (playerChoice === 'paper' && compChoice === 'scissors') ||
         (playerChoice === 'scissors' && compChoice === 'rock')
-    )   
-        {
-            compScore += 1;
-            return `You lose this round! Computer chose ${compChoice}.`
-        } else if (
-        (playerChoice === 'paper' && compChoice === 'rock') ||
-        (playerChoice === 'scissors' && compChoice === 'paper') ||
-        (playerChoice === 'rock' && compChoice === 'scissors')
-
-    )  {
-            userScore += 1;
-            return `You win this round! Computer chose ${compChoice}.`
-        }
-
+    ) {
+        compScore += 1;
+        return `You lose this round! Computer chose ${compChoice}.`;
+    } else {
+        userScore += 1;
+        return `You win this round! Computer chose ${compChoice}.`;
+    }
 }
 
 function displayResults() {
@@ -50,51 +43,54 @@ function displayResults() {
     console.log(`Computer Score: ${compScore}`);
 }
 
-function beginGame(){
-    
-//     let i = 0;
-        
-    btnRock.addEventListener("click", () => userSelection = 'rock')
-    btnPaper.addEventListener("click", () => userSelection = 'paper')
-    btnScissors.addEventListener("click", () => userSelection = 'scissors')
-
-    console.log(userSelection)
-
-
-//     while (i === 0) {     
-
-//         userSelection =  prompt('First to 5 wins! \nChoose Rock Paper or Scissors: ').toLowerCase();
-//         console.log(playRound(userSelection, compSelection(randomNum())));
-        
-
-//         if ((compScore === 1) || (userScore === 1)) {
-//             displayResults ();
-//             console.log(`GAME OVER!`);
-//             if (userScore === 5) {
-//                 console.log(`YOU WON THE GAME!`);
-//             } else {
-//                 console.log(`YOU LOST THE GAME!`);
-//             }
-//             i = 1;           
-//         } else {
-//             displayResults ();
-//         }
-//     } 
-}
-
-function restart () {
+function restart() {
     userScore = 0;
     compScore = 0;
-    beginGame ();
+    beginGame();
 }
 
-// Using event listeners
+function scoreTracker() {
+    return console.log(`User Score: ${userScore}\nComputer Score: ${compScore}`);
+}
 
-btnStart.addEventListener("click", beginGame)
+const checkGameState = () => {
+    
+    if (userScore >= 5 || compScore >= 5) {
+        console.log('GAME OVER');
+    } else {
+        console.log('CONTINUE');
+    }
+};
 
+const isWinner = () => {
+    if (userScore >= 5) {
+        console.log('Player Wins!!!');
+    } else if (compScore >= 5) {
+        console.log('Computer Wins!!!');
+    }
+}
 
+const handleChoiceClicked = (choice) => {
+    userSelection = choice;
+    console.log(userSelection);
+    compSelection(randomNum());
+    console.log(playRound(userSelection, compSelection()));
+    scoreTracker();
+    checkGameState();
+    isWinner();
+};
 
-
-
-
+btnRock.addEventListener('click', () => handleChoiceClicked('rock'));
+btnPaper.addEventListener('click', () => handleChoiceClicked('paper'));
+btnScissors.addEventListener('click', () => handleChoiceClicked('scissors'));
 // Calling the main loop
+
+function beginGame() {
+    let i = 0;
+    console.log('game has begun');
+    // while (userScore < 5 && compScore < 5) {
+    // }
+}
+// document.addEventListener('DOMContentLoaded', beginGame);
+
+btnStart.addEventListener('click', beginGame);
