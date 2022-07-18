@@ -3,7 +3,6 @@ const btnPaper = document.querySelector('#paperBtn');
 const btnScissors = document.querySelector('#scissorsBtn');
 const btnStart = document.querySelector('#startBtn');
 const btnRestart = document.querySelector('#restartBtn');
-const divDisplayResults = document.querySelector('#displayResults')
 const displayContent = document.querySelector('.container');
 const menuOptions = document.querySelector('.menu-options');
 const endGameMessage = document.querySelector('#message1');
