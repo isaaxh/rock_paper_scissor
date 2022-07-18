@@ -36,23 +36,32 @@ h1 {
   transition: 0.3s;
 }
 
+
 #startBtn:hover, #restartBtn:hover {
   font-size:45px;
   font-weight: bold;
 }
 
-#message1, #message2 {
+#message1, #message2, #message3 {
   font-size:25px;
+  margin-bottom: 10px;
 }
 
-#scoreTracker {
+#message3 {
+  margin-top: 10px;
+}
+
+.scoreTracker {
   font-size:100px;
   margin: 20px auto;
 }
 
+#userScore, #compScore {
+  display: inline
+}
 
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: auto;
   text-align: center;
@@ -86,33 +95,3 @@ img {
   object-fit: scale-down;
 }
 
-.choices-container {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  justify-content: space-between;
-}
-
-.choices-header, .choices-body {
-  display: flex;
-  justify-content: space-between;
-}
-
-.choices-header {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  margin-top: 35px;
-}
-
-.choices-body {
-  font-size: 25px;
-}
-
-#player-choices {
-  margin-left: 15px;
-}
-
-#computer-choices {
-  margin-right: 35px;
-}

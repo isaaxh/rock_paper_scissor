@@ -14,27 +14,20 @@
         <div>Click the start button to begin...</div>
         <div class = 'menuBtns'>
             <button type="button" id="startBtn">Start</button>
-            <button id="restartBtn" onClick="window.location.reload();">Restart</button>
         </div>
     </div>
     <div class = 'container'>
         <div id = 'message1'>First to five wins</div>
-        <div id = 'scoreTracker'>3 - 4</div>
-        <div id = 'message2'>Player wins this round</div>
+        <button id="restartBtn" onClick="window.location.reload();">Restart</button>
+        <div class = 'scoreTracker'>
+            <div id = 'userScore'>0</div> - <div id = 'compScore'>0</div>
+        </div>
+        <div id = 'message2'>Player wins </div>
+        <div id = 'message3'>Pick one</div>
         <div class = 'gameOptions'>
             <button type="button" class = 'gameBtn' id="rockBtn"><img id = 'img-rock' src="./img/rock (1).png" alt="img of rock icon"/></button>
             <button type="button" class = 'gameBtn'id="paperBtn"><img id = 'img-paper' src="./img/paper.png" alt="img of paper icon"/></button>
             <button type="button" class = 'gameBtn'id="scissorsBtn"><img id= 'img-scissors' src="./img/scissors.png" alt="img of scissors icon"/></button>
-        </div>
-        <div class = 'choices-container'>
-            <div class = 'choices-header'>
-                <div>Player</div>
-                <div>Computer</div>
-            </div>
-            <div class = 'choices-body'>
-                <div id = 'player-choices'>rock<br>paper</div>
-                <div id = 'computer-choices'>paper<br>paper</div>
-            </div>
         </div>
     </div>   
 
