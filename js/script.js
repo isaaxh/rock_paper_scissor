@@ -8,6 +8,7 @@ const displayContent = document.querySelector('.container');
 const menuOptions = document.querySelector('.menu-options');
 const endGameMessage = document.querySelector('#message1');
 const roundWinner = document.querySelector('#message2');
+const gameWinner = document.querySelector('#message3');
 const playerScoreTracker = document.querySelector('#userScore');
 const compScoreTracker = document.querySelector('#compScore')
 const modal = document.querySelector('.modal');
@@ -24,14 +25,17 @@ roundWinner.style.display = 'none';
 
 // Functions
 
+// generate a random number
 const randomNum = function generateRandomNum() {
     return Math.floor(Math.random() * 3);
 };
 
+// computer makes a random choice
 function compSelection() {
     return gameOptions[randomNum()];
 }
 
+// how a round of the game plays- game rules
 function playRound(playerChoice, compChoice) {
     if (playerChoice === compChoice) {
         return `It's a DRAW, both chose ${playerChoice}...`;
@@ -52,21 +56,7 @@ function playRound(playerChoice, compChoice) {
     }
 }
 
-function displayResults() {
-    console.log(`User Score: ${userScore}`);
-    console.log(`Computer Score: ${compScore}`);
-}
-
-function restart() {
-    userScore = 0;
-    compScore = 0;
-    beginGame();
-}
-
-function scoreTracker() {
-    return console.log(`User Score: ${userScore}\nComputer Score: ${compScore}`);
-}
-
+// disables game options and shows end game message when either player reaches score 5
 const checkGameState = () => {
     
     if (userScore >= 5 || compScore >= 5) {
@@ -74,12 +64,8 @@ const checkGameState = () => {
         showEndGameMessage ();
         btnRestart.style.display = 'block';
         return 
-    } else {
-        console.log('CONTINUE');
     }
 }
-
-
 
 const showEndGameMessage = () => {
     endGameMessage.innerText = 'GAME OVER! Click Restart to play again'
@@ -91,34 +77,32 @@ const disableGameOptions = () => {
     btnScissors.disabled = true;
 }
  
+// determines the game winner
 const isWinner = () => {
     if (userScore >= 5) {
-        console.log('Player Wins!!!');
+        gameWinner.innerText = ('PLAYER WINS!');
     } else if (compScore >= 5) {
-        console.log('Computer Wins!!!');
+        gameWinner.innerText = ('COMPUTER WINS!');
     }
 }
 
+// what happens when a game option button is clicked
 const handleChoiceClicked = (choice) => {
     userSelection = choice;
-    console.log(userSelection);
     compSelection(randomNum());
     roundWinner.innerText = playRound(userSelection, compSelection());
     roundWinner.style.display = 'flex';
-    scoreTracker();
     checkGameState();
     isWinner();
 };
 
+// starts the game and plays as many rounds as needed until there is a winner
 function beginGame() {
-    let i = 0;
-    console.log('game has begun');
     displayContent.style.display = "flex";
     menuOptions.style.display = "none";
     btnRock.addEventListener('click', () => handleChoiceClicked('rock'));
     btnPaper.addEventListener('click', () => handleChoiceClicked('paper'));
     btnScissors.addEventListener('click', () => handleChoiceClicked('scissors'));
-
 }
 
 btnStart.addEventListener('click', beginGame);

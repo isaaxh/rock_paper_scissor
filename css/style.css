@@ -23,19 +23,12 @@ h1 {
 }
 
 .menuBtns {
-  display: flex;
-  justify-content:space-between;
-  margin-top: 25px;
-  transition:0.3s;
-}
-
-#startBtn, #restartBtn {
   font-size: 30px;
   border: none;
   background-color: transparent;
   transition: 0.3s;
+  transition:0.3s;
 }
-
 
 #startBtn:hover, #restartBtn:hover {
   font-size:45px;
@@ -94,4 +87,3 @@ img {
   height: 260px;
   object-fit: scale-down;
 }
-
