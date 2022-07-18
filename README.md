@@ -6,4 +6,4 @@ what I have learned by completing this project:
 2. I have learned to make branches in github
 3. I have learned to to merge branches
 
-There are many more things to learn.
+Although I have learned alot, there are many more things to learn.
