@@ -99,7 +99,7 @@ img {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   .menu-options, .menuBtns{
     font-size: 25px;
@@ -109,11 +109,11 @@ img {
     font-size: 20px;
   }
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .gameBtn {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
