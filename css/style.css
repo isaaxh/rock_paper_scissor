@@ -98,9 +98,6 @@ img {
 }
 
 @media (max-width: 480px) {
-  body{
-    background-color: black;
-  }
   h1 {
     font-size: 60px;
   }
