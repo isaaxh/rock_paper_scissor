@@ -103,7 +103,7 @@ img {
   }
   .menu-options, .menuBtns{
     font-size: 25px;
-    padding: 10px;
+    margin: 10px;
   }
   #message1, #message2, #message3{
     font-size: 20px;
