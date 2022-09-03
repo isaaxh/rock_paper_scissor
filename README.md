@@ -7,3 +7,5 @@ what I have learned by completing this project:
 3. I have learned to to merge branches
 
 Although I have learned alot, there are many more things to learn.
+
+[Live Demo](https://isaaxh.github.io/rock_paper_scissor)
